@@ -34,7 +34,7 @@ class Timer {
         this.#intervalId = setInterval(() => {
             this.#render();
             this.#time -= 1000;
-            if (this.#time < 0 && this.#intervalId) {
+            if (this.#time < 0) {
                 clearInterval(this.#intervalId);
             }
         }, 1000);
@@ -89,7 +89,7 @@ const options = {
             startButton.disabled = true;
             iziToast.warning({
                 title: 'Caution',
-                position: 'topRight',
+                position: 'topCenter',
                 message: 'Please choose a date in the future',
             });
         }

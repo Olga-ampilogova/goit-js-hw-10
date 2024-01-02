@@ -41,13 +41,13 @@ submitButton.addEventListener('click', (event) => {
         .then(() =>
             iziToast.success({
                 // title: 'OK',
-                position: 'topRight',
+                position: 'topCenter',
                 message: `✅ Fullfilled promise in ${delay}ms`,
             }))
         .catch(() =>
             iziToast.error({
                 // title: 'Error',
-                position: 'topRight',
+                position: 'topCenter',
                 message: `❌ Rejected promise in ${delay}ms`,
             }));
 
